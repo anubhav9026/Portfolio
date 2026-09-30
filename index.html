@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anubhav Yadav — B.Tech CSE (AI & ML) Student | Python & Web Developer. Portfolio showcasing projects, skills and experience.">
+  <meta name="author" content="Anubhav Yadav">
+  <title>Anubhav Yadav | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/profile.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('portfolio-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">AY<span class="nav__logo-dot">.</span></a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#home" class="nav__link active">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#certifications" class="nav__link">Certifications</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__container">
+        <div class="hero__content reveal">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">Anubhav Yadav</h1>
+          <p class="hero__role">
+            <span class="hero__role-prefix">I'm a </span>
+            <span class="hero__typing" id="typing-text"></span>
+            <span class="hero__cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero__tagline">Building web applications &amp; machine learning models from Lucknow, India.</p>
+          <div class="hero__buttons">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="assets/Anubhav_Yadav_Resume.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer" download="Anubhav_Yadav_Resume.pdf">Download Resume</a>
+          </div>
+          <div class="hero__social">
+            <a href="https://github.com/anubhav9026" class="hero__social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/anubhav-yadav-0422912a9" class="hero__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="mailto:anubhavyadav902632@gmail.com" class="hero__social-link" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual reveal reveal--delay">
+          <div class="hero__avatar">
+            <div class="hero__avatar-glow" aria-hidden="true"></div>
+            <div class="hero__avatar-ring" aria-hidden="true"></div>
+            <div class="hero__avatar-inner">
+              <img
+                src="assets/profile.jpg"
+                alt="Anubhav Yadav — B.Tech CSE (AI & ML) Student and Python & Web Developer"
+                class="hero__avatar-img"
+                width="320"
+                height="320"
+                loading="eager"
+                decoding="async"
+              >
+            </div>
+            <span class="hero__avatar-badge">
+              <span class="hero__avatar-badge-dot" aria-hidden="true"></span>
+              Open to Internships
+            </span>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-icon"></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">About Me</span>
+          <h2 class="section__title">Who I Am</h2>
+        </div>
+        <div class="about__layout">
+          <aside class="about__profile reveal">
+            <div class="about__profile-frame">
+              <img
+                src="assets/profile.jpg"
+                alt="Anubhav Yadav professional headshot"
+                class="about__profile-img"
+                width="320"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <a href="assets/Anubhav_Yadav_Resume.pdf" class="btn btn--primary btn--full about__resume-btn" target="_blank" rel="noopener noreferrer" download="Anubhav_Yadav_Resume.pdf">
+              Download Resume
+            </a>
+          </aside>
+          <div class="about__main">
+          <div class="about__content reveal">
+            <p class="about__text">
+              B.Tech Computer Science (AI &amp; ML) student with hands-on internship experience in Python programming and web development. Skilled in building web applications and machine learning models, with a strong foundation in data structures, algorithms and problem solving. Seeking a software development or AI/ML internship.
+            </p>
+            <div class="about__info">
+              <div class="about__info-item">
+                <span class="about__info-label">Name</span>
+                <span class="about__info-value">Anubhav Yadav</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">Title</span>
+                <span class="about__info-value">B.Tech CSE (AI &amp; ML) Student | Python &amp; Web Developer</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">Location</span>
+                <span class="about__info-value">Lucknow, Uttar Pradesh, India</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">Email</span>
+                <a href="mailto:anubhavyadav902632@gmail.com" class="about__info-value about__info-link">anubhavyadav902632@gmail.com</a>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">Phone</span>
+                <a href="tel:+919026326151" class="about__info-value about__info-link">+91 9026326151</a>
+              </div>
+            </div>
+          </div>
+          <div class="about__stats reveal reveal--delay">
+            <div class="about__stat-card">
+              <span class="about__stat-icon" aria-hidden="true">&lt;/&gt;</span>
+              <h3 class="about__stat-title">Web Development</h3>
+              <p class="about__stat-desc">Responsive websites with HTML, CSS &amp; JavaScript</p>
+            </div>
+            <div class="about__stat-card">
+              <span class="about__stat-icon" aria-hidden="true">🐍</span>
+              <h3 class="about__stat-title">Python Programming</h3>
+              <p class="about__stat-desc">Building &amp; testing programs with solid fundamentals</p>
+            </div>
+            <div class="about__stat-card">
+              <span class="about__stat-icon" aria-hidden="true">🤖</span>
+              <h3 class="about__stat-title">AI &amp; ML</h3>
+              <p class="about__stat-desc">Machine learning models &amp; data analysis</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">Skills</span>
+          <h2 class="section__title">What I Know</h2>
+        </div>
+        <div class="skills__grid">
+          <div class="skills__group reveal">
+            <h3 class="skills__group-title">Languages</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Python</span>
+              <span class="skills__tag">JavaScript</span>
+              <span class="skills__tag">C</span>
+              <span class="skills__tag">SQL</span>
+            </div>
+          </div>
+          <div class="skills__group reveal reveal--delay">
+            <h3 class="skills__group-title">Web</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">HTML5</span>
+              <span class="skills__tag">CSS3</span>
+              <span class="skills__tag">JavaScript</span>
+              <span class="skills__tag">Responsive Design</span>
+              <span class="skills__tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="skills__group reveal">
+            <h3 class="skills__group-title">AI / ML</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Machine Learning</span>
+              <span class="skills__tag">scikit-learn</span>
+              <span class="skills__tag">Pandas</span>
+              <span class="skills__tag">NumPy</span>
+              <span class="skills__tag">Matplotlib</span>
+              <span class="skills__tag">Data Analysis</span>
+            </div>
+          </div>
+          <div class="skills__group reveal reveal--delay">
+            <h3 class="skills__group-title">Tools</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Git</span>
+              <span class="skills__tag">GitHub</span>
+              <span class="skills__tag">VS Code</span>
+              <span class="skills__tag">Jupyter Notebook</span>
+              <span class="skills__tag">Linux</span>
+            </div>
+          </div>
+          <div class="skills__group skills__group--wide reveal">
+            <h3 class="skills__group-title">Core</h3>
+            <div class="skills__tags">
+              <span class="skills__tag">Data Structures &amp; Algorithms</span>
+              <span class="skills__tag">OOP</span>
+              <span class="skills__tag">Debugging</span>
+              <span class="skills__tag">Version Control</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">Experience</span>
+          <h2 class="section__title">Where I've Worked</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline__item reveal">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="timeline__date">Oct 2025 – Dec 2025</span>
+              <h3 class="timeline__title">Web Development Intern</h3>
+              <p class="timeline__company">PartanX Pvt. Ltd.</p>
+              <ul class="timeline__list">
+                <li>Developed and maintained responsive web pages using HTML, CSS and JavaScript.</li>
+                <li>Completed assigned tasks on schedule while collaborating with the team.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline__item reveal">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span class="timeline__date">Aug 2026 – Sep 2026</span>
+              <h3 class="timeline__title">Python Programming Intern (Virtual)</h3>
+              <p class="timeline__company">CodeAlpha</p>
+              <ul class="timeline__list">
+                <li>Completed a virtual internship building and testing Python programs.</li>
+                <li>Applied Python fundamentals, functions, file handling and problem solving.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">Projects</span>
+          <h2 class="section__title">Things I've Built</h2>
+        </div>
+        <div class="projects__grid">
+          <article class="project-card reveal">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" aria-label="Live demo" title="Live Demo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#" class="project-card__link" aria-label="GitHub repository" title="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Personal Portfolio Website</h3>
+            <p class="project-card__desc">Responsive portfolio showcasing projects, skills and contact details. Built with modern web standards for a clean, professional presentation.</p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML</span>
+              <span class="project-card__tag">CSS</span>
+              <span class="project-card__tag">JavaScript</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="#" class="btn btn--sm btn--primary">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--outline">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93L12 22"/><path d="M8 6a4 4 0 0 1 8 0"/><path d="M12 10v4"/><path d="M8 14h8"/></svg>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" aria-label="Live demo" title="Live Demo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#" class="project-card__link" aria-label="GitHub repository" title="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Fake News Detection Model</h3>
+            <p class="project-card__desc">ML model that classifies news articles as real or fake using text preprocessing and classification techniques.</p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">Python</span>
+              <span class="project-card__tag">NLP</span>
+              <span class="project-card__tag">scikit-learn</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="#" class="btn btn--sm btn--primary">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--outline">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h.01"/><path d="M17 7h.01"/><path d="M7 17h.01"/><path d="M17 17h.01"/><rect width="6" height="6" x="9" y="9"/></svg>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link" aria-label="Live demo" title="Live Demo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="#" class="project-card__link" aria-label="GitHub repository" title="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Builder Pass Generator for Hacker House Goa 2026</h3>
+            <p class="project-card__desc">Retro-tropical designed pass generator with QR-verified passes, instant download and share functionality.</p>
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML</span>
+              <span class="project-card__tag">CSS</span>
+              <span class="project-card__tag">JavaScript</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="#" class="btn btn--sm btn--primary">Live Demo</a>
+              <a href="#" class="btn btn--sm btn--outline">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education section" id="education">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">Education</span>
+          <h2 class="section__title">Academic Background</h2>
+        </div>
+        <div class="education__grid">
+          <article class="education__card reveal">
+            <div class="education__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="education__content">
+              <span class="education__year">2023 – 2027</span>
+              <h3 class="education__degree">B.Tech, Computer Science &amp; Engineering (AI &amp; ML)</h3>
+              <p class="education__school">Dr. A.P.J. Abdul Kalam Technical University, Lucknow</p>
+            </div>
+          </article>
+          <article class="education__card reveal reveal--delay">
+            <div class="education__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+            </div>
+            <div class="education__content">
+              <span class="education__year">2023</span>
+              <h3 class="education__degree">Intermediate (Science, PCM)</h3>
+              <p class="education__school">S Prashad V Prashad Inter College, Bahraich</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications section" id="certifications">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">Certifications</span>
+          <h2 class="section__title">Credentials &amp; Achievements</h2>
+        </div>
+        <ul class="certifications__list">
+          <li class="certifications__item reveal">
+            <span class="certifications__badge" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </span>
+            <span class="certifications__text">Certificate of Internship: Web Development Intern, PartanX Pvt. Ltd.</span>
+          </li>
+          <li class="certifications__item reveal">
+            <span class="certifications__badge" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </span>
+            <span class="certifications__text">Certificate of Completion: Python Programming Virtual Internship, CodeAlpha</span>
+          </li>
+          <li class="certifications__item reveal">
+            <span class="certifications__badge" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </span>
+            <span class="certifications__text">GenAI Powered Data Analytics Job Simulation, Tata (hosted on Forage)</span>
+          </li>
+          <li class="certifications__item reveal">
+            <span class="certifications__badge" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </span>
+            <span class="certifications__text">AI Agent Builder Workshop, BotCampus AI</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="section__label">Contact</span>
+          <h2 class="section__title">Get In Touch</h2>
+          <p class="section__subtitle">I'm currently seeking a software development or AI/ML internship. Feel free to reach out!</p>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <a href="mailto:anubhavyadav902632@gmail.com" class="contact__info-card">
+              <span class="contact__info-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <div>
+                <span class="contact__info-label">Email</span>
+                <span class="contact__info-value">anubhavyadav902632@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+919026326151" class="contact__info-card">
+              <span class="contact__info-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div>
+                <span class="contact__info-label">Phone</span>
+                <span class="contact__info-value">+91 9026326151</span>
+              </div>
+            </a>
+            <a href="https://github.com/anubhav9026" class="contact__info-card" target="_blank" rel="noopener noreferrer">
+              <span class="contact__info-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </span>
+              <div>
+                <span class="contact__info-label">GitHub</span>
+                <span class="contact__info-value">github.com/anubhav9026</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/anubhav-yadav-0422912a9" class="contact__info-card" target="_blank" rel="noopener noreferrer">
+              <span class="contact__info-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              <div>
+                <span class="contact__info-label">LinkedIn</span>
+                <span class="contact__info-value">anubhav-yadav-0422912a9</span>
+              </div>
+            </a>
+          </div>
+
+          <form class="contact__form reveal reveal--delay" id="contact-form" novalidate>
+            <div class="form__group">
+              <label for="name" class="form__label">Name</label>
+              <input type="text" id="name" name="name" class="form__input" placeholder="Your name" required autocomplete="name">
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" name="email" class="form__input" placeholder="your@email.com" required autocomplete="email">
+            </div>
+            <div class="form__group">
+              <label for="subject" class="form__label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form__input" placeholder="Subject" required>
+            </div>
+            <div class="form__group">
+              <label for="message" class="form__label">Message</label>
+              <textarea id="message" name="message" class="form__input form__textarea" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__copy">&copy; 2026 Anubhav Yadav. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="https://github.com/anubhav9026" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/anubhav-yadav-0422912a9" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:anubhavyadav902632@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
